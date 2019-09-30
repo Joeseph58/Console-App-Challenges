@@ -6,22 +6,29 @@ using System.Threading.Tasks;
 
 namespace _01_Challenge_Repository
 {
-    public enum IngredientsType(fettucine = 1, pizza, macaroni, meatBalls)
+    //public enum IngredientsType(add_cheese = 1, katsup, mustard, pickles, onoins)
     public class Menu
     {
-        public Menu(string base1, string sauce, string addative, string cheese)
-
+        public Menu()
         {
 
-            Base1 = base1;
-            Sauce = sauce;
-            Addative = addative;
-            Cheese = cheese;
+        }
+        
+
+        public Menu(int number, string name, string ingredients, string descript, string price)
+        {
+            Number = number;
+            Name = name;
+            Descript = descript;
+            Ingredients = ingredients;
+            Price = price;
 
         }
-        public string Base1 { get; set; }
-        public string Sauce { get; set; }
-        public string Addative { get; set; }
-        public string Cheese { get; set; }
+
+        public int Number { get; set; }
+        public string Name { get; set; }
+        public string Descript { get; set; }
+        public string Ingredients { get; set; }
+        public string Price { get; set; }
     }
 }

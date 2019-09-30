@@ -9,49 +9,56 @@ namespace _01_Challenge_Repository
     public class Menu_Repository
     {
         List<Menu> _menuList = new List<Menu>();
-        public void AddToMenu()
+
+        
+
+        public void AddToMenu(Menu content)
         {
-            if 
-            {
-              
-            }
+            _menuList.Add(content);
         }
+
         //get list
         public List<Menu> GetMenu()
         {
 
-            return _menuList
+            return _menuList;
         }
+
         ////update
         //public void UpdateMenu(update)
         //{
         //    Menu menu = new _menuList;
         //    update.example = update.Menu;
-            
-        //}
- 
-        //remove 
-        public void Remove(int teamPosition)
-        {
-            Menu menu = _menuList;
-            _menuList.Remove(menu);
 
+        //}
+        public void RemoveFromMenu(int number)
+        {
+            foreach (Menu content in _menuList)
+            {
+                if (content.Number == number)
+                {
+                    _menuList.Remove(content);
+                    break;
+                }
+            }
         }
+    
+        
         //seed list
         public void SeedList()
         {
 
-            Menu listOne = new Menu("fettuccine", "heavy cream", "butter", "parmesan" IngredientsType.fettucine);
-            Menu listTwo = new Menu("dough", "sauce", "pepperoni", "cheese", IngredientsType.pizza);
-            Menu listThree = new Menu("macaroni", "cream", "butter", "cheddar", IngredientsType.macaroni);
+            Menu content = new Menu(1, "fettuccine", "fettuccine alfredo", "fettuccine, alfredo sauce", "$7");
+            Menu contentTwo = new Menu(2, "pizza", "pepperoni pizza", "cheese, pepperoni, pizza sauce", "$5");
+            Menu contentThree = new Menu(3, "macaroni", "macaroni and cheese", "macaroni, cheddar cheese", "$3");
 
-            AddToList(listOne);
-            AddToList(listTwo);
-            AddToList(listThree);
+            AddToMenu(content);
+            AddToMenu(contentTwo);
+            AddToMenu(contentThree);
 
 
         }
 
     }
 }
-}
+
