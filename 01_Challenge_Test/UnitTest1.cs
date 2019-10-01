@@ -41,13 +41,6 @@ namespace _01_Challenge_Test
 
 
         }
-        [TestMethod]
-        public void CreateMethod()
-        {
-            Menu_Repository _menuList = new Menu_Repository();
-            _menuList.
-
-        }
 
     }
 }
