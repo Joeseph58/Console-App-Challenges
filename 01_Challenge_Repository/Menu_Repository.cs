@@ -10,8 +10,6 @@ namespace _01_Challenge_Repository
     {
         List<Menu> _menuList = new List<Menu>();
 
-        
-
         public void AddToMenu(Menu content)
         {
             _menuList.Add(content);
